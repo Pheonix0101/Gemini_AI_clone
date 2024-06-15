@@ -1,14 +1,3 @@
-// const gkey = 'AIzaSyA3AaTHlolyNOjm3pnpTEOodud6ZhqwdSk';
-
-/*
- * Install the Generative AI SDK
- *
- * $ npm install @google/generative-ai
- *
- * See the getting started guide for more information
- * https://ai.google.dev/gemini-api/docs/get-started/node
- */
-
 import {
   GoogleGenerativeAI,
   HarmCategory,
@@ -33,8 +22,6 @@ const generationConfig = {
 async function run(prompt) {
   const chatSession = model.startChat({
     generationConfig,
-    // safetySettings: Adjust safety settings
-    // See https://ai.google.dev/gemini-api/docs/safety-settings
     history: [],
   });
 

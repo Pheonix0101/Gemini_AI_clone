@@ -17,11 +17,10 @@ const ContextProvider = (props) => {
     }, 80 * index);
   };
 
-  const newChat = ()=>{
+  const newChat = () => {
     setloading(false);
     setshowResult(false);
-
-  }
+  };
 
   const onSent = async (prompt) => {
     setresultData("");
@@ -60,7 +59,7 @@ const ContextProvider = (props) => {
     setinput("");
   };
 
-  // onSent('what is gemini API')
+
   const contextValue = {
     prevPrompts,
     setprevPrompts,
@@ -72,7 +71,7 @@ const ContextProvider = (props) => {
     resultData,
     input,
     setinput,
-    newChat
+    newChat,
   };
 
   return (
