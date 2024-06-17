@@ -21,6 +21,7 @@ function Main() {
     <div className="main">
       <div className="nav">
         <p>Gemini</p>
+
         <img src={assets.user_icon} alt="user_icon" />
       </div>
       <div className="main-container">
@@ -28,7 +29,7 @@ function Main() {
           <>
             <div className="greet">
               <p>
-                <span>Hello, dev.</span>
+                <span>Hello, Purushottam</span>
               </p>
               <p>how can I help you today?</p>
             </div>

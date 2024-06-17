@@ -8,10 +8,10 @@ function Sidebar() {
   const [toggleSidebar, settoggleSidebar] = useState(false);
   const { onSent, prevPrompts, setRecentPrompt, newChat } = useContext(Context);
 
-  const loadrecentPrompt = async (prompt)=>{
+  const loadrecentPrompt = async (prompt) => {
     // setRecentPrompt(prompt);
     onSent(prompt);
-  }
+  };
 
   return (
     <div className="sidebar">
@@ -22,7 +22,7 @@ function Sidebar() {
           src={assets.menu_icon}
           alt="menu_icon"
         />
-        <div onClick={()=>newChat()} className="new-chat">
+        <div onClick={() => newChat()} className="new-chat">
           <img src={assets.plus_icon} alt="plus_icon" />
           {toggleSidebar ? <p>new chat</p> : null}
         </div>
@@ -31,9 +31,13 @@ function Sidebar() {
             <p className="recent-title">Recent</p>
             {prevPrompts.map((item, index) => {
               return (
-                <div key={index} onClick={()=>loadrecentPrompt(item)} className="recent-entry">
+                <div
+                  key={index}
+                  onClick={() => loadrecentPrompt(item)}
+                  className="recent-entry"
+                >
                   <img src={assets.message_icon} alt="messsage_icon" />
-                  <p>{item.slice(0,18)}...</p>
+                  <p>{item.slice(0, 18)}...</p>
                 </div>
               );
             })}

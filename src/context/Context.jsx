@@ -59,7 +59,6 @@ const ContextProvider = (props) => {
     setinput("");
   };
 
-
   const contextValue = {
     prevPrompts,
     setprevPrompts,
@@ -80,3 +79,8 @@ const ContextProvider = (props) => {
 };
 
 export default ContextProvider;
+
+
+
+
+
